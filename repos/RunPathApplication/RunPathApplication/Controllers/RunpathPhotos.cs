@@ -13,11 +13,6 @@ namespace RunPathApplication.Controllers
     [Route("[controller]")]
     public class RunpathPhotos : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
-        {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
-
         public static readonly string albumsJson = new WebClient().DownloadString("http://jsonplaceholder.typicode.com/albums");
 
         List<Albums> resultAlbum = JsonConvert.DeserializeObject<List<Albums>>(albumsJson);
